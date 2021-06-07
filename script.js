@@ -3,7 +3,7 @@ const videoElement = document.getElementsByClassName('input_video')[0];
 const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const controlsElement = document.getElementsByClassName('control-panel')[0];
 const canvasCtx = canvasElement.getContext('2d');
-
+const count = document.getElementById("count");
 // We'll add this to our control panel later, but we'll save it here so we can
 // call tick() each time the graph runs.
 const fpsControl = new FPS();
@@ -52,8 +52,8 @@ function onResults(results) {
   if (angle < 70) flag = 1
   if (prev_flag == 1 && flag == 0) counter = counter + 1
   prev_flag = flag
-  // console.log(counter);
-
+  console.log(counter);
+  count.innerText = 'Count: ' + counter
   // Update the frame rate. 
   fpsControl.tick();
   // Draw the overlays.
@@ -122,8 +122,7 @@ new ControlPanel(controlsElement, {
   minTrackingConfidence: 0.5
 })
   .add([
-    new StaticText({ title: 'MediaPipe Pose' }),
-    new StaticText({ title: 'Squat Counter ' + counter }),
+    new StaticText({ title: 'Squat Counter' }),
     fpsControl,
     new Toggle({ title: 'Selfie Mode', field: 'selfieMode' }),
     new Slider({
