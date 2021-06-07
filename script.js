@@ -52,10 +52,11 @@ function onResults(results) {
   if (angle < 70) flag = 1
   if (prev_flag == 1 && flag == 0) counter = counter + 1
   prev_flag = flag
-  console.log(counter);
+  // console.log(counter);
   count.innerText = 'Count: ' + counter
   // Update the frame rate. 
   fpsControl.tick();
+  // Draw the overlays.
   // Draw the overlays.
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
