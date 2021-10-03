@@ -92,6 +92,32 @@ body {
   opacity: 1;
   transition: opacity 1s;
 }
+/* .loading .message {
+  font-size: x-large;
+}
+.loading .spinner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  border: 32px solid #bebebe;
+  border-top: 32px solid #3498db;
+  border-radius: 50%;
+}
+
+.loaded .loading {
+  opacity: 0;
+}
+
+.shoutout {
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  text-align: center;
+  font-size: 48px;
+  position: absolute;
+  font-weight: bold;
+} */
 .loading .message {
   font-size: x-large;
 }
